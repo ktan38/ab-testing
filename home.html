@@ -2,13 +2,151 @@
 
 <html>
   <head>
-    <title>INSERT TITLE HERE!</title>
+    <title>CS1300 AB-TESTING</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="bootstrap.css">
     <!-- TODO: add additional links here! e.g. fonts, icons, more stylesheets, etc. -->
     <meta content="width=device-width, initial-scale=1" name="viewport" />
   </head>
 
   <body>
     <!-- TODO: put your HTML code here! -->
+    <div class = "container"> 
+
+      <h1>AB-Testing</h1>
+      <p class = "text">
+        For this project, I took two different versions of a cactus-shopping website, and performed A/B Testing and statistical analysis to 
+        gather insight into the difference between the two UI designs. 
+      </p>
+      <br>
+    <h2>Part 0: Making the Websites</h2>
+
+    <p class = "text"> 
+      I was given a version of the cactus making website, and asked to make modifications to it to create a second version.
+      I decided to make the shopping cart logo next to "CART" at the bottom of the screen the same color as the rest of the buttons on the screen,
+      instead of the original red. This simple modification is shown below:
+
+    </p>
+
+    <div class="row text-center justify-content-center">
+      <div class="col mb-5">
+          <h5>Version A (Original)</h5>
+          <img class="ab_versions" src="v1.png">
+            
+      </div>
+      <div class="col mb-5">
+          <h5>Version B (Modified)</h5>
+          <img class="ab_versions" src="v2.png">
+            
+      </div>
+      
+    </div>
+
+    <h2>Part 1: Creating Hypotheses</h2>
+
+    <p class = "text"> 
+      Users were assigned the task of adding $150 dollars worth of cacti into their cart. 
+      For this project, I measured two variables: Time to Completion and Return Rate. Time of Completion refers to
+      the time it takes for the user to complete the task. The Return Rate refers to rate at which users decide to return to the original 
+      page. The following table shows my Null and Alternative Hypotheses for each task, as well as my reasoning for each.
+
+
+
+    </p>
+
+    <table class="table table-hover table-text">
+        <thead>
+          <tr>
+            <th scope="col">Variable</th>
+            <th scope="col">Null Hypothesis</th>
+            <th scope="col">Alternative Hypothesis</th>
+            <th scope="col">Reasoning</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Time to Completion</th>
+            <td>Version B and Version A have the same Time to Completion</td>
+            <td>Version B has a longer Time to Completion than Version A
+            </td>
+            <td>Since Version B's cart icon has the same color as the rest of the buttons on the page, the user could confuse the two 
+              elements, and take longer to figure out where to view the contents of the cart. 
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">Return Rate</th>
+            <td>Version A and Version B have the same Return Rate</td>
+            <td>Version B has a lower Return Rate than Version A</td>
+            <td>The cart icon's color makes viewing the contents of the cart harder for the user, since they may not be 
+              able to find the cart. This could cause B to to have a lower Return Rate since users may not leave the first page in the first place.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br><br>
+
+      <h2>Part 2: Data Collection</h2>
+
+      <p class = "text">
+        I deployed a website that would show Version A of the website half the time, and Version B otherwise. Other students in my class
+        were asked to complete the task descirbed above (add $150 worth of cacti into the cart), and their interactions with the website were recorded. 
+        I was able to collect data from 20 users. The following are cleaned-up tables of the data I collected. 
+      </p>
+      <div class="row text-center justify-content-center">
+          <div class="col mb-5">
+              <h5>Time to Completion Table</h5>
+              <img src="TC.png">
+                
+          </div>
+          <div class="col mb-5">
+              <h5>Return Rate Table</h5>
+              <img class="rr" src="RR.png">
+                
+          </div>
+          
+        </div>
+
+      <h2>Part 3: Conclusions and Takeaways</h2>
+
+      <p class = "text">
+        Here is an infographic depicting my conclusions:
+      </p>
+      <br>
+
+      <div class="row text-center justify-content-center">
+          <div class="col mb-5">
+          <img class = "inf" src="infographic.png">
+        </div>
+
+      </div>
+
+      <p class = "text">
+        And as for my final takeaways:
+      </p>
+
+      <ul class = "list">
+          <li class = "bullet">20 samples is nowhere near enough for AB testing. My p-values were way off, and a lot of it was due to the high standard deviations.
+            Collecting more samples may help with this problem.
+          </li>
+          <li class = "bullet">I attempted altering a simple hierarchy/consistency rule by changing the color of an icon to be the exact same as a button.
+            With 20 samples, it doesn't seem like I can make any conclusion about this having a significant impact on navigation through a simple website. Perhaps this change applied
+            on a larger scale could create more of a difference.
+          </li>
+          <li class = "bullet">There's something that didn't feel right about data collection either. Since everyone was at their own home/working space during section,
+            there was no way of controlling the conditions where the users were operating from. Perhaps a much larger sample size could alleviate this problem, but this could
+            be one of the reasons why there was such a high standard deviation.
+          </li>
+      </ul>
+
+
+
+
+
+
+
+
+    </div>
+
+
   </body>
 </html>
